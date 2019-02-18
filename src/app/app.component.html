@@ -101,6 +101,31 @@
         <td>date:"MMMM - dd"</td>
         <td>{{ date | date: "MMMM - dd" }}</td>
       </tr>
+      <tr>
+        <td>{{ name2 }}</td>
+        <td>capitalizado</td>
+        <td>{{ name2 | capitalizado }}</td>
+      </tr>
+      <tr>
+        <td>{{ name2 }}</td>
+        <td>capitalizado:false</td>
+        <td>{{ name2 | capitalizado: false }}</td>
+      </tr>
+      <tr>
+        <td>{{ name }}</td>
+        <td>
+          password:{{ activar }}
+          <br />
+          <button
+            (click)="activar = !activar"
+            type="button"
+            class="btn btn-outline-primary"
+          >
+            Activar/Desactivar
+          </button>
+        </td>
+        <td>{{ name | password:activar }}</td>
+      </tr>
     </tbody>
   </table>
 
@@ -113,4 +138,12 @@
   <pre>
       {{ heroe | json }}
   </pre>
+
+  <h4>Youtube <small>video</small></h4>
+  <iframe
+    width="420"
+    height="315"
+    [src]="videoCode | domseguro: 'https://www.youtube.com/embed/'"
+  >
+  </iframe>
 </div>

@@ -8,6 +8,8 @@ import { reject } from "q";
 export class AppComponent {
   public name = "Darwin";
 
+  public name2 = "darWin gonzAlez sUarez";
+
   public array = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
 
   public PI = Math.PI;
@@ -31,4 +33,8 @@ export class AppComponent {
   });
 
   public date = new Date();
+
+  public videoCode = "tgbNymZ7vqY";
+
+  public activar = true;
 }
